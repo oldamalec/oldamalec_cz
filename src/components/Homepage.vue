@@ -3,7 +3,9 @@
         <div id="svg"/>
         <div id="name" class="mt-40">Ing. Oldřich Malec</div>
         <div id="mail" class="mt-20">
-            <a href="mailto:oldamalec@gmail.com">
+            <a href="mailto:oldamalec@gmail.com"
+               @click="logClick('mail')"
+            >
                 oldamalec@gmail.com
             </a>
         </div>
@@ -12,6 +14,7 @@
                :key="site.alt"
                :href="site.href"
                target="_blank"
+               @click="logClick(site.alt)"
             >
                 <img class="social"
                      :src="site.src"
@@ -27,7 +30,7 @@
 
 import {SVG} from "@svgdotjs/svg.js";
 import Delaunay from "faster-delaunay";
-
+import firebase from "firebase";
 
 export default {
     name: "Homepage",
@@ -94,6 +97,9 @@ export default {
         },
         hexFromRgb: function (r, g, b) {
             return (0x10000 * r) + (0x100 * g) + b
+        },
+        logClick: function (label) {
+            firebase.analytics().logEvent('click_' + label);
         }
     }
 }
