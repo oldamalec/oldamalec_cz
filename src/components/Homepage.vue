@@ -4,6 +4,7 @@
         <div id="name" class="mt-40">Ing. Oldřich Malec</div>
         <div id="mail" class="mt-20">
             <a href="mailto:oldamalec@gmail.com"
+               target="_blank"
                @click="logClick('mail')"
             >
                 oldamalec@gmail.com
