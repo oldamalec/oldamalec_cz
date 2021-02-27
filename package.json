@@ -9,10 +9,11 @@
     "deploy": "yarn build && firebase deploy"
   },
   "dependencies": {
+    "@firebase/analytics": "^0.6.4",
+    "@firebase/app": "^0.6.15",
     "@svgdotjs/svg.js": "^3.0.16",
     "core-js": "^3.9.0",
     "faster-delaunay": "^1.0.0",
-    "firebase": "^8.2.9",
     "vue": "^2.6.12"
   },
   "devDependencies": {

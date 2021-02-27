@@ -31,7 +31,7 @@
 
 import {SVG} from "@svgdotjs/svg.js";
 import Delaunay from "faster-delaunay";
-import firebase from "firebase";
+import firebase from "@firebase/app";
 
 export default {
     name: "Homepage",
